@@ -45,7 +45,7 @@ var numbers = {
 };
 
 //number это число вводимое пользователем
-//надо исправить для 11 - 19
+
 
 function quantity(number){
 	var counter = 0;
