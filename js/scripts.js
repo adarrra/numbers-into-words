@@ -70,11 +70,14 @@ function threeDigit(number){
 		ourString = ourString + addWords(Math.floor((q-1) / 3)) + " ";
 		threeDigit(number % Math.pow(10,q - delta));
 		return;
-	}
-	for (i = q; i > 0; i--) { //эта часть для трехзначных частей числа
-		currentNumber = number - (number % Math.pow(10, i - 1));
-		numbersIntoWords(currentNumber);
-		number = number % Math.pow(10, i - 1);
+	}else if(number > 10 && number < 20) {
+		numbersIntoWords(number);
+	}else {
+		for (i = q; i > 0; i--) { //эта часть для трехзначных частей числа
+			currentNumber = number - (number % Math.pow(10, i - 1));
+			numbersIntoWords(currentNumber);
+			number = number % Math.pow(10, i - 1);
+		}
 	}
 }
 
