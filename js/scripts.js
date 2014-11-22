@@ -79,9 +79,10 @@ jQuery(document).ready(function	() {
 				numbersIntoWords(number);
 			} else {
 				for (i = q; i > 0; i--) { //эта часть для трехзначных частей числа
-					currentNumber = number - (number % Math.pow(10, i - 1));
+                    rest = (number % Math.pow(10, i - 1));
+					currentNumber = number - rest;
 					numbersIntoWords(currentNumber);
-					number = number % Math.pow(10, i - 1);
+					number = number % rest;
 				}
 			}
 		}
