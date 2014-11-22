@@ -40,12 +40,7 @@ jQuery(document).ready(function	() {
 			600: "six hundred",
 			700: "seven hundred",
 			800: "eight hundred",
-			900: "nine hundred",
-			1000: "one thousand",
-			1000000: "one million",
-			1000000000: "one billion",
-			1000000000000: "one trillion"
-
+			900: "nine hundred"
 		};
 
 //number это число вводимое пользователем
@@ -59,6 +54,7 @@ jQuery(document).ready(function	() {
 			}
 			return counter;
 		}
+
 
 		function threeDigit(number) {
 			var q = quantity(number);
@@ -94,6 +90,8 @@ jQuery(document).ready(function	() {
 					return "million";
 				case 3:
 					return "billion";
+				case 4:
+					return "trillion";
 			}
 		}
 
@@ -118,13 +116,6 @@ jQuery(document).ready(function	() {
 
 });
 
-
-/*	var currentNumber = Math.floor(number / Math.pow(10,(q- delta)));   идея как сделать для 1000, но работает только для 1000, или quantity
-	if(currentNumber == 0){
-		numbersIntoWords(number)
-	}else {
-		threeDigit(currentNumber);
-	}*/
 
 
 
