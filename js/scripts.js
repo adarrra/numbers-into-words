@@ -75,10 +75,10 @@ jQuery(document).ready(function	() {
 				numbersIntoWords(number);
 			} else {
 				for (i = q; i > 0; i--) { //эта часть для трехзначных частей числа
-                    rest = (number % Math.pow(10, i - 1));
+                    var rest = number % Math.pow(10, i - 1);
 					currentNumber = number - rest;
 					numbersIntoWords(currentNumber);
-					number = number % rest;
+					number = rest;
 				}
 			}
 		}
